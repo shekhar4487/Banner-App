@@ -270,8 +270,11 @@ def create_banner_image(products, heading, size, logo_img=None, bg_img=None):
             bw, bh = tw + 16, th + 6
             bx = cx - bw // 2
             by = ty + 4
-            draw.rounded_rectangle((bx, by, bx + bw, by + bh),
-                                   radius=bh // 2, fill=(11, 101, 0))
+            draw.rounded_rectangle(
+                (bx, by, bx + bw, by + bh),
+                radius=bh // 2,
+                fill=(11, 101, 0),
+            )
             draw.text((cx - tw // 2, by + 3), txt, font=save_font, fill="white")
 
     # Footer
